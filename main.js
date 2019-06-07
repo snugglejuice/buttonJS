@@ -46,7 +46,15 @@ const displayContactButtons = () => {
 
 const flip = () => {
   let hexagonBtn = document.getElementById('hexagon');
-  hexagonBtn.className += ' flip';
+  let color = document.getElementById('hex-color');
+  if (hexagonBtn.className === 'hex-container'){
+    hexagonBtn.className += ' flip';
+    color.className += ' hex-color--white'
+  }
+  else {
+    hexagonBtn.className = 'hex-container';
+    color.className = 'hexagon-in2 hex-color';
+  }
 }
 
 socialBtn.onclick = displaySocialButtons;
