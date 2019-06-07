@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang='fr' class='h-100'>
+    <head>
+        <title> Animation </title>
+
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta name='description' content='Test for Animation' />
+	      <link rel='stylesheet' type='text/css' href='style.css' />
+
+    </head>
+    <body>
+
+        <div>
+          <h2> Animation 1 </h2>
+          <div class='container container--goofilter'>
+
+              <div class='button' id='linkedin'> <img src='./img/linked-in-square-button.png'/> </div>
+              <div class='button' id='facebook'> <img src='./img/facebook.png'/> </div>
+              <div class='button' id='internet'> <img src='./img/global.png'/> </div>
+              <div class='button' id='social' > <img src='./img/plus-symbol.png'/> </div>
+
+          </div>
+        </div>
+
+        <div>
+          <h2> Animation 2 </h2>
+          <div class='container'>
+            <div class='contactButton contactButton--white' id='call'><img src='./img/call.png'/></div>
+            <div class='contactButton contactButton--white' id='mail'><img src='./img/mail.png'/></div>
+            <div class='contactButton contactButton--black' id='contact'><img src='./img/sent-mail.png'/></div>
+          </div>
+        </div>
+
+        <div>
+          <h2> Animation 3 </h2>
+          <div class='container'>
+            <div class='hexagon flip' id='hexagon'>
+                <div class='hexagon-in1'>
+                  <div class='hexagon-in2'></div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <svg xmlns='http://www.w3.org/2000/svg' version='1.1'>
+          <defs>
+            <filter id='goo'>
+              <feGaussianBlur in='SourceGraphic' stdDeviation='10' result='blur' />
+              <feColorMatrix in='blur' mode='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7' result='goo' />
+              <feBlend in='SourceGraphic' in2='goo' />
+            </filter>
+          </defs>
+        </svg>
+
+        <script type='text/javascript' src='main.js'></script>
+    </body>
+</html>
