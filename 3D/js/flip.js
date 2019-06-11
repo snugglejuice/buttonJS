@@ -1,5 +1,6 @@
 var isAnimate = false;
 function main() {
+
   const canvas = document.getElementById('flip');
   const button = document.getElementById('btn');
   const renderer = new THREE.WebGLRenderer();
@@ -12,7 +13,7 @@ function main() {
 
   const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
   camera.position.set( 0, 20, 100 );
-
+  
   // Add DirectionalLight
   {
     const color = 0xFFFFFF;
@@ -81,6 +82,7 @@ function main() {
   }
 
   function render() {
+
 
     resizeRendererToDisplaySize(renderer);
 

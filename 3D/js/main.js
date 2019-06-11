@@ -1,6 +1,7 @@
 
 function main() {
-  const canvas = document.getElementById('#c');
+
+  const canvas = document.getElementById('c');
   const renderer = new THREE.WebGLRenderer();
   renderer.setSize( window.innerWidth/2, window.innerHeight/2 );
   document.body.appendChild( renderer.domElement );
@@ -15,15 +16,21 @@ function main() {
   // Add DirectionalLight
   {
     const color = 0xFFFFFF;
-    const intensity = 1;
+    const intensity = 3;
     const light = new THREE.DirectionalLight(color, intensity);
     light.castShadow = true;
     light.position.set(10, 30, 10);
-    light.target.position.set(-4, 0, -4);
+    light.target.position.set(0, 20, 0);
     scene.add(light);
     scene.add(light.target);
 
+
   }
+
+  //Add Ambient light
+
+  var aLight = new THREE.AmbientLight( 0xffffff ); // soft white light
+  scene.add( aLight );
 
   // Collada 3D Obj loader
   var logo = null;
