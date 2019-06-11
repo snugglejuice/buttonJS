@@ -16,6 +16,15 @@ img {
  height: 50px;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
 .button {
 
   position: absolute;
